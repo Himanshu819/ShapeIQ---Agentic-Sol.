@@ -1,0 +1,23 @@
+# import requests
+# import os
+
+# def download_pdf(pdf_url, mpn, save_dir="data/pdfs"):
+#     try:
+#         os.makedirs(save_dir, exist_ok=True)
+#         filename = f"{mpn}.pdf"
+#         filepath = os.path.join(save_dir, filename)
+
+#         headers = {"User-Agent": "Mozilla/5.0"}
+#         r = requests.get(pdf_url, headers=headers, stream=True, timeout=15)
+
+#         if r.status_code == 200 and "application/pdf" in r.headers.get("Content-Type", ""):
+#             with open(filepath, "wb") as f:
+#                 f.write(r.content)
+#             print(f"PDF downloaded and saved at: {filepath}")
+#             return filepath
+#         else:
+#             print(f"Download failed. Status: {r.status_code}, Content-Type: {r.headers.get('Content-Type')}")
+#             return None
+#     except Exception as e:
+#         print(f"Error downloading PDF: {e}")
+#         return None
