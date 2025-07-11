@@ -57,7 +57,7 @@ VENDOR_PARSERS = {
 # 2. Detect vendor from MPN (basic heuristic, can improve later)
 def detect_vendor(mpn: str) -> str:
     mpn = mpn.upper()
-    if mpn.startswith("GRM") or mpn.startswith("GCM") or mpn.startswith("GRT"): # Murata Capacitor series
+    if mpn.startswith("GRM") or mpn.startswith("GCM") or mpn.startswith("GRT") or mpn.startswith("GCJ"): # Murata Capacitor series
         return "murata"
     # Add more rules here for other vendors/component types
     # elif mpn.startswith("CL") or mpn.startswith("CIGW"): return "samsung"
