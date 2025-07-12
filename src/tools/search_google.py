@@ -2,7 +2,6 @@ import os
 import requests
 from dotenv import load_dotenv
 load_dotenv()
-
 API_KEY = os.getenv("SERPER_API_KEY")
 SEARCH_URL = "https://google.serper.dev/search"
 def search_mpn(mpn):
